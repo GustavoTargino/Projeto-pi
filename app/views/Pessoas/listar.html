@@ -1,0 +1,18 @@
+#{extends 'main.html' /} 
+#{set title:'Listar de dados pessoais' /}
+
+<ul>
+
+#{list items:lista, as:'x'}
+
+   <li> <a href = '@{Pessoas.editar(x.id)}'>Editar - </a> <a href = '@{Pessoas.excluir(x.id)}'>Deletar -- </a> ${x.nome} (${x.email})</li>
+   
+#{/list}
+
+#{else}
+  <li> Nenhuma pessoa cadastrada </li>
+#{/else}
+
+</ul>
+
+<a class = "btn btn-primary" href = "@{Pessoas.form}">Cadastrar novo</a>

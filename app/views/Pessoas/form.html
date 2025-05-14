@@ -1,0 +1,24 @@
+#{extends 'main.html' /} 
+#{set title:'Formulário de dados pessoais' /}
+
+<form action="/pessoas/salvar">
+
+	<div class="container">
+
+		<h1>Cadastro de pessoas </h1>
+
+		<div class="form-group">
+			<label for="pessoas.nome">Nome:</label> <input type="text"
+				name="pessoa.nome" class="form-control" placeholder="Seu nome" value = "${p?.nome}"/>
+
+		</div>
+
+		<div class="form-group">
+			<label for="pessoa.email">Email:</label> <input type="text"
+				name = pessoa.email class="form-control" placeholder="Seu email" value = "${p?.email}"/>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+</div>
